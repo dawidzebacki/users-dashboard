@@ -4,7 +4,6 @@ const fetchAllUsers = async () => {
 
         if (fetchResponse.ok === true) {
             const data = await fetchResponse.json();
-            console.log('hi')
             return data;
         }
 
@@ -51,7 +50,7 @@ const editUserAPI = async (user) => {
     };
 
     try {
-        const fetchResponse = await fetch(`${`${process.env.REACT_APP_API_ENDPOINT}`}/${user.id}`, settings);
+        const fetchResponse = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/${user.id}`, settings);
 
         if (fetchResponse.ok === true) {
             const data = await fetchResponse.json();
@@ -75,7 +74,7 @@ const deleteUserAPI = async (user) => {
     };
 
     try {
-        const fetchResponse = await fetch(`${`${process.env.REACT_APP_API_ENDPOINT}`}/${user.id}`, settings);
+        const fetchResponse = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/${user.id}`, settings);
 
         if (fetchResponse.ok === true) {
             const data = await fetchResponse.json();
