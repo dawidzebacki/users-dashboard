@@ -1,0 +1,6 @@
+.add-user-link {
+  float: right;
+  margin: 0 1em 1em 1em;
+  width: 8em;
+  align-self: flex-end;
+}
