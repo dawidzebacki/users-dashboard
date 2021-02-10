@@ -6,6 +6,8 @@ import { selectUsers } from '../../store/usersSlice';
 import DeleteUser from '../DeleteUser/DeleteUser';
 import EditUser from '../EditUser/EditUser';
 
+import './styles.css';
+
 const UsersList = () => {
 
     const usersList = useSelector(selectUsers);

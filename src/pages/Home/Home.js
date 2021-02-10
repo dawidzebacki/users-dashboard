@@ -4,6 +4,8 @@ import UsersList from '../../components/UsersList/UsersList';
 import AddUser from '../../components/AddUser/AddUser';
 import Title from '../../components/Title/Title';
 
+import './styles.css';
+
 const Home = () => {
 
   return (

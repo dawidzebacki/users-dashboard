@@ -1,0 +1,13 @@
+.wrapper {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; */
+    padding: 1em 0em 1em 0;
+    min-width: 960px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  
