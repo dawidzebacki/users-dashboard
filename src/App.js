@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import {
+  asyncFetchUsers
+} from './store/usersSlice';
 
 import './App.css';
 
-const App = () => {
+function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+
+    dispatch(asyncFetchUsers());
+
+  }, []);
+
   return (
-    <div className="App">
+    <main className="app-container">
       hello world
-    </div>
+    </main>
   );
 }
 
