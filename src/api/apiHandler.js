@@ -1,4 +1,4 @@
-const fetchAllUsers = async () => {
+const fetchUsersAPI = async () => {
     try {
         const fetchResponse = await fetch(`${process.env.REACT_APP_API_ENDPOINT}`);
 
@@ -88,4 +88,4 @@ const deleteUserAPI = async (user) => {
     }
 }
 
-export { fetchAllUsers, addUserAPI, editUserAPI, deleteUserAPI };
+export { fetchUsersAPI, addUserAPI, editUserAPI, deleteUserAPI };

@@ -1,5 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchAllUsers, addUserAPI, editUserAPI, deleteUserAPI } from '../api/apiHandler';
+import {
+    fetchUsersAPI,
+    addUserAPI,
+    editUserAPI,
+    deleteUserAPI
+} from '../api/apiHandler';
 
 export const usersSlice = createSlice({
     name: 'users',
@@ -40,11 +45,17 @@ export const usersSlice = createSlice({
     },
 });
 
-export const { fetchUsers, addUser, deleteUser, editUser, apiError } = usersSlice.actions;
+export const {
+    fetchUsers,
+    addUser,
+    deleteUser,
+    editUser,
+    apiError
+} = usersSlice.actions;
 
 export const asyncFetchUsers = () => {
     return async dispatch => {
-        const data = await fetchAllUsers();
+        const data = await fetchUsersAPI();
 
         if (data.ok === false) {
             const error = {
