@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { asyncDeleteUser } from '../../store/usersSlice';
-import {
-    DeleteOutlined,
-    LoadingOutlined,
-} from '@ant-design/icons';
+import { DeleteOutlined } from '@ant-design/icons';
+import { Modal, Button } from 'antd';
 
 const DeleteUser = ({ id }) => {
 
+    const [isModalVisible, setIsModalVisible] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const dispatch = useDispatch();
@@ -18,21 +17,40 @@ const DeleteUser = ({ id }) => {
         }))
     }
 
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
+
     useEffect(() => {
         if (loading) {
             setTimeout(() => setLoading(false), 10000)
         }
     }, [loading]);
 
-
     return (
         <>
-            { loading ?
-                (<LoadingOutlined style={{ fontSize: '22px', color: '#1890ff' }} />) :
-                (<DeleteOutlined
-                    style={{ fontSize: '22px', color: '#D11A2A' }}
-                    onClick={handleDeleteUser} />)
-            }
+            <DeleteOutlined
+                style={{ fontSize: '22px', color: '#D11A2A' }}
+                onClick={showModal} />
+
+            <Modal
+                title="Delete user"
+                visible={isModalVisible}
+                onCancel={handleCancel}
+                footer={[
+                    <Button key="back" onClick={handleCancel}>
+                        Cancel
+                    </Button>,
+                    <Button key="submit" type="primary" loading={loading} onClick={() => handleDeleteUser(id)}>
+                        Delete
+                    </Button>,
+                ]}>
+                <p>Are you sure that do you want to delete this user?</p>
+            </Modal>
         </>
     )
 }
