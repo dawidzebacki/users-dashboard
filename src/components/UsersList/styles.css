@@ -1,49 +1,53 @@
+/* had to override some styles to get that design */
+
 .ant-table {
-    background-color: transparent !important;
-    width: 100% !important;
-  }
-  
-  .ant-table-thead > tr > th {
-    background-color: rgba(255,255,255, 0.2) !important;
-    border-bottom-color: transparent !important;
-  }
-  
-  .ant-table-tbody > tr > td {
-    border-bottom-color: transparent !important;
-  }
-  
-  .ant-pagination-item-active {
-    background-color: rgba(255,255,255, 0.2) !important;
-    border-color: transparent !important;
-  }
-  
-  td.ant-table-column-sort {
-    background-color: transparent !important;
-  }
-  
-  .ant-pagination-prev, .ant-pagination-next {
-    background-color: transparent !important;
-    border-color: transparent !important;
-  }
-  
-  .ant-pagination-disabled .ant-pagination-item-link, 
-  .ant-pagination-disabled:hover .ant-pagination-item-link, 
-  .ant-pagination-disabled:focus .ant-pagination-item-link {
-    border-color: transparent !important;
-  }
-  
-  .ant-pagination-prev .ant-pagination-item-link,
-  .ant-pagination-next .ant-pagination-item-link {
-    background-color: rgba(255,255,255, 0.2) !important;
-    border-color: transparent !important;
-  }
-  
-  .ant-table-pagination.ant-pagination {
-    margin: 0;
-    padding: 1em;
-    background-color: transparent !important;
-  }
-  
-  .ant-pagination-item {
-    background-color: rgba(255,255,255, 0.2) !important;
-  }
+  background-color: transparent !important;
+  width: 100% !important;
+}
+
+.ant-table-thead > tr > th {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-bottom-color: transparent !important;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom-color: transparent !important;
+}
+
+.ant-pagination-item-active {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: transparent !important;
+}
+
+td.ant-table-column-sort {
+  background: transparent !important;
+}
+
+.ant-pagination-prev,
+.ant-pagination-next {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.ant-pagination-disabled .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link,
+.ant-pagination-disabled:focus .ant-pagination-item-link {
+  border-color: transparent !important;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: transparent !important;
+}
+
+.ant-table-pagination.ant-pagination {
+  margin: 0;
+  padding: 1em;
+  background-color: transparent !important;
+}
+
+.ant-pagination-item {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: transparent !important;
+}

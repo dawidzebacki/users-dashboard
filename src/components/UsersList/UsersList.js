@@ -54,7 +54,10 @@ const UsersList = () => {
             key: 'actions',
             render: (record) => (
                 <Space size="middle">
-                    <EditUser id={record.id} name={record.name} email={record.email} />
+                    <EditUser
+                        id={record.id}
+                        name={record.name}
+                        email={record.email} />
                     <DeleteUser id={record.id} />
                 </Space>
             ),
@@ -63,7 +66,11 @@ const UsersList = () => {
 
     return (
         <>
-            <Table rowClassName="table" columns={columns} dataSource={usersList} rowKey="id" />
+            <Table
+                rowClassName="table"
+                columns={columns}
+                dataSource={usersList}
+                rowKey="id" />
         </>
     )
 }
