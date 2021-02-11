@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #ffafbd;
-  background: -webkit-linear-gradient(to right, #ffafbd , #ffc3a0);
-  background: linear-gradient(to right, #de6262 , #ffb88c);
+  background: -webkit-linear-gradient(to right, #ffafbd, #ffc3a0);
+  background: linear-gradient(to right, #de6262, #ffb88c);
   display: flex;
   justify-content: center;
 }

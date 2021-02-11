@@ -5,8 +5,6 @@ import {
   asyncFetchUsers
 } from './store/usersSlice';
 
-import './App.css';
-
 import ApiError from './components/API_Error/API_Error';
 import Home from './pages/Home/Home';
 import Form from './components/Form/Form';
@@ -22,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <main className="app-container">
+    <main>
       <ApiError />
       <BrowserRouter>
         <Switch>
