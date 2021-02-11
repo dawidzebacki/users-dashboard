@@ -9,6 +9,7 @@ import './App.css';
 
 import ApiError from './components/API_Error/API_Error';
 import Home from './pages/Home/Home';
+import Form from './components/Form/Form';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
   useEffect(() => {
 
     dispatch(asyncFetchUsers());
-
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -26,6 +27,8 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" component={Home} exact />
+          <Route path="/edit/:id" component={Form} exact />
+          <Route path="/add" component={Form} exact />
         </Switch>
       </BrowserRouter>
     </main>
