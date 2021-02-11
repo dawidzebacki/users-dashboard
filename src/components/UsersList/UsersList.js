@@ -18,6 +18,7 @@ const UsersList = () => {
             className: 'table',
             dataIndex: 'id',
             key: 'id',
+            responsive: ["md"]
         },
         {
             title: 'Name',
@@ -35,19 +36,22 @@ const UsersList = () => {
                 if (prev < next) return -1;
                 else if (prev > next) return 1;
                 return 0;
-            }
+            },
+            responsive: ["md"]
         },
         {
             title: 'E-mail',
             key: 'email',
             dataIndex: 'email',
+            responsive: ["sm"]
         },
         {
             title: 'City',
             key: 'city',
             render: (record) => {
                 return record.address.city
-            }
+            },
+            responsive: ["md"]
         },
         {
             title: 'Actions',
