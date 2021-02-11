@@ -6,9 +6,13 @@ import './styles.css';
 
 const AddUser = () => {
     return (
-        <div >
-            <Link className="add-user-link" to='add'><Button type="primary">ADD USER</Button></Link>
-        </div>
+        <>
+            <Link
+                className="add-user-link"
+                to='add'>
+                <Button type="primary">ADD USER</Button>
+            </Link>
+        </>
     )
 }
 
