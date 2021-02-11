@@ -108,8 +108,6 @@ export const asyncDeleteUser = (user) => {
     return async dispatch => {
         const data = await deleteUserAPI(user);
 
-        console.log(data);
-
         if (data.ok === false) {
             const error = {
                 statusText: data.statusText,
